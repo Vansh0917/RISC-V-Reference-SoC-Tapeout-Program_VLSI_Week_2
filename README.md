@@ -1,4 +1,4 @@
-# RISC-V Reference SoC Tapeout Program - Week 2 Complete Documentation
+# RISC-V Reference SoC Tapeout Program - Week 2
 
 ## BabySoC Fundamentals & Functional Modeling
 
@@ -9,34 +9,13 @@
 [![Simulation](https://img.shields.io/badge/Tool-Icarus%20Verilog-orange)](http://iverilog.icarus.com/)
 [![Status](https://img.shields.io/badge/Week%202-Complete-brightgreen)](https://github.com/Vansh0917/RISC-V-Reference-SoC-Tapeout-Program_VLSI_Week_0)
 
----
-
-## 📋 Table of Contents
-
-<details>
-<summary><strong>Click to expand complete table of contents</strong></summary>
+## Table of Contents
 
 1. [Program Overview](#program-overview)
 2. [Week 2 Objectives](#week-2-objectives)
 3. [Repository Structure](#repository-structure)
 4. [Part 1 - Theory: SoC Fundamentals](#part-1---theory-soc-fundamentals)
-   - [Introduction to System-on-Chip Design](#introduction-to-system-on-chip-design)
-   - [SoC Architecture and Components](#soc-architecture-and-components)
-   - [VSDBabySoC as an Educational Platform](#vsdbabysoc-as-an-educational-platform)
-   - [Functional Modeling in SoC Design](#functional-modeling-in-soc-design)
-   - [Design Verification Methodologies](#design-verification-methodologies)
-   - [Integration and Interconnect Strategies](#integration-and-interconnect-strategies)
-   - [Mixed-Signal Design Considerations](#mixed-signal-design-considerations)
-   - [Educational Value and Learning Outcomes](#educational-value-and-learning-outcomes)
-   - [Industry Relevance and Applications](#industry-relevance-and-applications)
 5. [Part 2 - Laboratory: Functional Modeling](#part-2---laboratory-functional-modeling)
-   - [Environment Setup](#1-environment-setup)
-   - [Project Preparation](#2-project-preparation)
-   - [Pre-synthesis Simulation](#3-pre-synthesis-simulation)
-   - [Waveform Analysis](#4-waveform-analysis)
-   - [Post-synthesis Simulation](#5-post-synthesis-simulation)
-   - [Results Documentation](#6-results-documentation)
-   - [Troubleshooting Guide](#7-troubleshooting-guide)
 6. [VSDBabySoC Architecture](#vsdbabysoc-architecture)
 7. [Simulation Results](#simulation-results)
 8. [Tools and Environment](#tools-and-environment)
@@ -44,10 +23,6 @@
 10. [Known Issues](#known-issues)
 11. [References](#references)
 12. [Conclusion](#conclusion)
-
-</details>
-
----
 
 ## Program Overview
 
@@ -75,9 +50,6 @@ The VSDBabySoC serves as our educational platform - a simplified mixed-signal So
 - Attempt post-synthesis simulation (Gate-Level Simulation)
 
 ## Repository Structure
-
-<details>
-<summary><strong>Click to view complete repository structure</strong></summary>
 
 ```
 RISC-V-Reference-SoC-Tapeout-Program_VLSI_Week_2/
@@ -112,18 +84,34 @@ RISC-V-Reference-SoC-Tapeout-Program_VLSI_Week_2/
     └── learning-outcomes.md
 ```
 
-</details>
-
 ---
 
 # Part 1 - Theory: SoC Fundamentals
 
-## Introduction to System-on-Chip Design
+# System-on-Chip (SoC) Fundamentals and VSDBabySoC Learning Analysis
 
-<details>
-<summary><strong>Click to expand SoC Design Fundamentals</strong></summary>
+## Executive Summary
 
-### Definition and Core Concepts
+This comprehensive analysis explores the fundamental concepts of System-on-Chip (SoC) design and demonstrates how the VSDBabySoC serves as an effective educational platform within the RISC-V Reference SoC Tapeout Program. Building upon foundational knowledge from Week 1, this document establishes the theoretical framework necessary for understanding complex integrated circuit design methodologies and their practical implementation.
+
+## Table of Contents
+
+1. [Introduction to System-on-Chip Design](#introduction-to-system-on-chip-design)
+2. [SoC Architecture and Components](#soc-architecture-and-components)
+3. [VSDBabySoC as an Educational Platform](#vsdbabysoc-as-an-educational-platform)
+4. [Functional Modeling in SoC Design](#functional-modeling-in-soc-design)
+5. [Design Verification Methodologies](#design-verification-methodologies)
+6. [Integration and Interconnect Strategies](#integration-and-interconnect-strategies)
+7. [Mixed-Signal Design Considerations](#mixed-signal-design-considerations)
+8. [Educational Value and Learning Outcomes](#educational-value-and-learning-outcomes)
+9. [Industry Relevance and Applications](#industry-relevance-and-applications)
+10. [Conclusion and Future Perspectives](#conclusion-and-future-perspectives)
+
+---
+
+## 1. Introduction to System-on-Chip Design
+
+### 1.1 Definition and Core Concepts
 
 A System-on-Chip (SoC) represents the pinnacle of modern integrated circuit design, encompassing multiple functional components traditionally implemented as separate chips onto a single semiconductor substrate. This integration paradigm has revolutionized the electronics industry by enabling unprecedented levels of functionality, performance, and power efficiency within compact form factors.
 
@@ -135,7 +123,7 @@ The fundamental principle underlying SoC design is **convergence** - the strateg
 - **Cost Optimization**: Single manufacturing process and reduced assembly complexity
 - **Reliability Enhancement**: Fewer solder joints and mechanical interfaces
 
-### Historical Evolution and Market Drivers
+### 1.2 Historical Evolution and Market Drivers
 
 The evolution of SoC technology has been driven by several converging factors:
 
@@ -151,7 +139,7 @@ The evolution of SoC technology has been driven by several converging factors:
 - Automotive safety and reliability standards
 - IoT device proliferation requiring integration and miniaturization
 
-### Design Abstraction Levels
+### 1.3 Design Abstraction Levels
 
 SoC design operates across multiple abstraction levels, each serving specific design and verification purposes:
 
@@ -162,14 +150,9 @@ SoC design operates across multiple abstraction levels, each serving specific de
 - **Transistor Level**: Physical device characteristics
 - **Layout Level**: Geometric mask representations
 
-</details>
+## 2. SoC Architecture and Components
 
-## SoC Architecture and Components
-
-<details>
-<summary><strong>Click to expand Architecture Details</strong></summary>
-
-### Core Processing Elements
+### 2.1 Core Processing Elements
 
 Modern SoCs typically incorporate multiple processing elements optimized for specific computational tasks:
 
@@ -183,7 +166,7 @@ Modern SoCs typically incorporate multiple processing elements optimized for spe
 - Digital Signal Processors (DSPs) for signal processing algorithms
 - Neural Processing Units (NPUs) for machine learning acceleration
 
-### Memory Subsystem Architecture
+### 2.2 Memory Subsystem Architecture
 
 Memory hierarchy design critically impacts SoC performance and power consumption:
 
@@ -197,7 +180,7 @@ Memory hierarchy design critically impacts SoC performance and power consumption
 - Flash memory controllers for non-volatile storage
 - Memory management units (MMUs) for virtual addressing
 
-### Interconnect Infrastructure
+### 2.3 Interconnect Infrastructure
 
 SoC interconnect design determines data flow efficiency and system performance:
 
@@ -211,7 +194,7 @@ SoC interconnect design determines data flow efficiency and system performance:
 - Quality-of-Service (QoS) support for real-time requirements
 - Power-efficient routing algorithms
 
-### Peripheral and I/O Subsystems
+### 2.4 Peripheral and I/O Subsystems
 
 Comprehensive I/O capabilities enable SoC interaction with external systems:
 
@@ -230,14 +213,9 @@ Comprehensive I/O capabilities enable SoC interaction with external systems:
 - Audio codecs for high-fidelity sound processing
 - Touch controllers for capacitive sensing
 
-</details>
+## 3. VSDBabySoC as an Educational Platform
 
-## VSDBabySoC as an Educational Platform
-
-<details>
-<summary><strong>Click to expand Educational Platform Analysis</strong></summary>
-
-### Design Philosophy and Educational Objectives
+### 3.1 Design Philosophy and Educational Objectives
 
 The VSDBabySoC has been specifically architected as an educational platform that distills complex SoC design principles into a comprehensible yet realistic implementation. Its design philosophy encompasses several key educational objectives:
 
@@ -250,7 +228,7 @@ Despite its simplified nature, VSDBabySoC incorporates industry-standard interfa
 **Progressive Learning:**
 The modular architecture supports incremental complexity introduction, allowing students to master individual components before understanding their integration.
 
-### Core Component Analysis
+### 3.2 Core Component Analysis
 
 **RVMYTH Processor Core:**
 The RISC-V based RVMYTH processor serves as the computational heart of the VSDBabySoC, demonstrating:
@@ -273,7 +251,7 @@ The 10-bit DAC illustrates mixed-signal integration challenges:
 - Resolution and accuracy considerations
 - System-level analog/digital interaction
 
-### Integration Architecture
+### 3.3 Integration Architecture
 
 The VSDBabySoC integration architecture demonstrates several critical SoC design patterns:
 
@@ -292,14 +270,9 @@ The VSDBabySoC integration architecture demonstrates several critical SoC design
 - Noise isolation between analog and digital sections
 - Power supply decoupling strategies
 
-</details>
+## 4. Functional Modeling in SoC Design
 
-## Functional Modeling in SoC Design
-
-<details>
-<summary><strong>Click to expand Functional Modeling Details</strong></summary>
-
-### Modeling Abstraction and Verification Strategy
+### 4.1 Modeling Abstraction and Verification Strategy
 
 Functional modeling represents a critical phase in SoC design, bridging the gap between system specification and detailed implementation. This abstraction level focuses on behavioral accuracy while abstracting timing and implementation details.
 
@@ -309,7 +282,7 @@ Functional modeling represents a critical phase in SoC design, bridging the gap 
 - Early software development enablement
 - System-level performance analysis
 
-### Verification Methodology
+### 4.2 Verification Methodology
 
 Comprehensive verification ensures functional correctness across all abstraction levels:
 
@@ -323,7 +296,7 @@ Comprehensive verification ensures functional correctness across all abstraction
 - Equivalence checking between abstraction levels
 - Model checking for complex system behaviors
 
-### Testbench Architecture and Stimulus Generation
+### 4.3 Testbench Architecture and Stimulus Generation
 
 Effective verification requires sophisticated testbench architectures:
 
@@ -337,14 +310,9 @@ Effective verification requires sophisticated testbench architectures:
 - Functional coverage analysis
 - Performance metric extraction
 
-</details>
+## 5. Design Verification Methodologies
 
-## Design Verification Methodologies
-
-<details>
-<summary><strong>Click to expand Verification Methodologies</strong></summary>
-
-### Multi-Level Verification Strategy
+### 5.1 Multi-Level Verification Strategy
 
 SoC verification employs a comprehensive multi-level approach:
 
@@ -363,7 +331,7 @@ SoC verification employs a comprehensive multi-level approach:
 - Use case scenario execution
 - System stress testing
 
-### Verification Tools and Methodologies
+### 5.2 Verification Tools and Methodologies
 
 **Hardware Description Language (HDL) Simulation:**
 - Icarus Verilog for behavioral simulation
@@ -375,14 +343,9 @@ SoC verification employs a comprehensive multi-level approach:
 - Timing diagram generation and analysis
 - Debug capability enhancement
 
-</details>
+## 6. Integration and Interconnect Strategies
 
-## Integration and Interconnect Strategies
-
-<details>
-<summary><strong>Click to expand Integration Strategies</strong></summary>
-
-### System Integration Challenges
+### 6.1 System Integration Challenges
 
 SoC integration presents unique challenges requiring systematic approaches:
 
@@ -396,7 +359,7 @@ SoC integration presents unique challenges requiring systematic approaches:
 - Dynamic voltage and frequency scaling
 - Leakage current optimization
 
-### Interface Design and Protocol Implementation
+### 6.2 Interface Design and Protocol Implementation
 
 **Standard Interface Adoption:**
 - AXI/AHB protocol implementation
@@ -408,14 +371,9 @@ SoC integration presents unique challenges requiring systematic approaches:
 - Performance optimization strategies
 - Compatibility maintenance
 
-</details>
+## 7. Mixed-Signal Design Considerations
 
-## Mixed-Signal Design Considerations
-
-<details>
-<summary><strong>Click to expand Mixed-Signal Design</strong></summary>
-
-### Analog-Digital Integration Challenges
+### 7.1 Analog-Digital Integration Challenges
 
 Mixed-signal SoCs require careful consideration of analog-digital interactions:
 
@@ -429,7 +387,7 @@ Mixed-signal SoCs require careful consideration of analog-digital interactions:
 - Voltage regulator integration
 - Decoupling capacitor placement optimization
 
-### Signal Integrity and Performance
+### 7.2 Signal Integrity and Performance
 
 **High-Speed Signal Design:**
 - Transmission line effects consideration
@@ -441,14 +399,9 @@ Mixed-signal SoCs require careful consideration of analog-digital interactions:
 - ADC noise performance optimization
 - Reference voltage stability
 
-</details>
+## 8. Educational Value and Learning Outcomes
 
-## Educational Value and Learning Outcomes
-
-<details>
-<summary><strong>Click to expand Learning Outcomes</strong></summary>
-
-### Skill Development Framework
+### 8.1 Skill Development Framework
 
 The VSDBabySoC educational platform develops multiple competency areas:
 
@@ -470,7 +423,7 @@ The VSDBabySoC educational platform develops multiple competency areas:
 - Collaboration and teamwork
 - Continuous learning and adaptation
 
-### Learning Progression and Assessment
+### 8.2 Learning Progression and Assessment
 
 **Progressive Complexity Introduction:**
 - Individual component understanding
@@ -484,14 +437,9 @@ The VSDBabySoC educational platform develops multiple competency areas:
 - Problem-solving approach assessment
 - Innovation and creativity demonstration
 
-</details>
+## 9. Industry Relevance and Applications
 
-## Industry Relevance and Applications
-
-<details>
-<summary><strong>Click to expand Industry Applications</strong></summary>
-
-### Current Industry Trends
+### 9.1 Current Industry Trends
 
 The VSDBabySoC educational approach aligns with current industry developments:
 
@@ -505,7 +453,7 @@ The VSDBabySoC educational approach aligns with current industry developments:
 - Neural network acceleration techniques
 - Real-time inference capabilities
 
-### Career Preparation and Professional Development
+### 9.2 Career Preparation and Professional Development
 
 **Industry-Relevant Skills:**
 - EDA tool proficiency (Synopsys, Cadence, Mentor Graphics)
@@ -519,18 +467,88 @@ The VSDBabySoC educational approach aligns with current industry developments:
 - System architecture and integration
 - Technical leadership and management
 
-</details>
+## 10. Conclusion and Future Perspectives
+
+### 10.1 Key Learning Achievements
+
+The VSDBabySoC platform successfully demonstrates how complex SoC design principles can be made accessible through thoughtful educational design. Key achievements include:
+
+**Comprehensive Understanding:**
+Students develop thorough comprehension of SoC architecture, component integration, and verification methodologies through hands-on experience with a realistic yet manageable design.
+
+**Practical Skill Development:**
+The platform enables students to develop industry-relevant skills using professional EDA tools while working with standard protocols and interfaces.
+
+**System-Level Perspective:**
+By working with a complete SoC implementation, students develop critical system-level thinking skills essential for complex integrated circuit design.
+
+### 10.2 Future Learning Trajectory
+
+The VSDBabySoC experience establishes a foundation for advanced topics:
+
+**Physical Design Flow:**
+- Floor planning and placement optimization
+- Routing and timing closure techniques
+- Power analysis and optimization
+- Design for manufacturability
+
+**Advanced Verification:**
+- Universal Verification Methodology (UVM)
+- Formal verification techniques
+- Coverage-driven verification
+- System-level validation
+
+**Specialized Domains:**
+- High-speed interface design
+- Memory subsystem optimization
+- Power management integration
+- Security and reliability enhancement
+
+### 10.3 Impact on Professional Development
+
+This educational experience prepares students for successful careers in the semiconductor industry by providing:
+
+**Technical Foundation:**
+Solid understanding of SoC design principles, verification methodologies, and EDA tool usage.
+
+**Problem-Solving Skills:**
+Experience with real-world design challenges and systematic debugging approaches.
+
+**Industry Awareness:**
+Understanding of current trends, standard practices, and emerging technologies.
+
+**Continuous Learning Framework:**
+Ability to adapt to rapidly evolving technology landscape and embrace new design methodologies.
+
+---
+
+The VSDBabySoC educational platform represents an exemplary approach to SoC design education, successfully balancing theoretical depth with practical relevance. Through systematic exploration of its architecture, components, and integration strategies, students develop both technical competency and system-level understanding essential for success in the modern semiconductor industry. This foundation enables continued learning and professional growth in the dynamic field of integrated circuit design and verification.
 
 ---
 
 # Part 2 - Laboratory: Functional Modeling
 
+# Week 2 Part 2 - Functional Modeling Laboratory Procedure
+
+## Overview
+
+This document provides comprehensive step-by-step instructions for completing the VSDBabySoC functional modeling laboratory exercises. The lab focuses on practical implementation of pre-synthesis and post-synthesis simulation using industry-standard EDA tools.
+
+## Table of Contents
+
+1. [Environment Setup](#1-environment-setup)
+2. [Project Preparation](#2-project-preparation)
+3. [Pre-synthesis Simulation](#3-pre-synthesis-simulation)
+4. [Waveform Analysis](#4-waveform-analysis)
+5. [Post-synthesis Simulation](#5-post-synthesis-simulation)
+6. [Results Documentation](#6-results-documentation)
+7. [Troubleshooting Guide](#7-troubleshooting-guide)
+
+---
+
 ## 1. Environment Setup
 
-<details>
-<summary><strong>Click to expand Environment Setup Details</strong></summary>
-
-### System Requirements
+### 1.1 System Requirements
 
 **Hardware Requirements:**
 - Minimum 4GB RAM (8GB recommended)
@@ -542,7 +560,7 @@ The VSDBabySoC educational approach aligns with current industry developments:
 - Python 3.6+
 - Git version control
 
-### Tool Installation
+### 1.2 Tool Installation
 
 #### Step 1: Install Base Packages
 
@@ -591,7 +609,7 @@ sandpiper-saas --version
 
 **Screenshot Location:** `docs/images/setup/tool-verification.png`
 
-### Environment Variables
+### 1.3 Environment Variables
 
 ```bash
 # Add to ~/.bashrc for permanent setup
@@ -600,14 +618,11 @@ echo 'export PATH=$VLSI_HOME/tools/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-</details>
+---
 
 ## 2. Project Preparation
 
-<details>
-<summary><strong>Click to expand Project Preparation Steps</strong></summary>
-
-### Repository Cloning
+### 2.1 Repository Cloning
 
 ```bash
 # Create working directory
@@ -632,7 +647,7 @@ drwxrwxr-x  2 user user 4096 Sep 28 20:58 output/
 
 **Screenshot Location:** `docs/images/setup/repo-structure.png`
 
-### Source Code Analysis
+### 2.2 Source Code Analysis
 
 #### Key Files Overview:
 
@@ -644,7 +659,7 @@ drwxrwxr-x  2 user user 4096 Sep 28 20:58 output/
 | `avsddac.v` | Digital-to-analog converter | `src/module/` |
 | `testbench.v` | Simulation testbench | `src/module/` |
 
-### TL-Verilog to Verilog Conversion
+### 2.3 TL-Verilog to Verilog Conversion
 
 ```bash
 # Activate Python environment
@@ -668,14 +683,11 @@ Status: SUCCESS
 
 **Screenshot Location:** `docs/images/terminal/tlv-conversion.png`
 
-</details>
+---
 
 ## 3. Pre-synthesis Simulation
 
-<details>
-<summary><strong>Click to expand Pre-synthesis Simulation Steps</strong></summary>
-
-### Create Output Directories
+### 3.1 Create Output Directories
 
 ```bash
 # Create necessary output directories
@@ -684,7 +696,7 @@ mkdir -p output/post_synth_sim
 mkdir -p logs/
 ```
 
-### Compilation Process
+### 3.2 Compilation Process
 
 ```bash
 # Navigate to project root
@@ -711,7 +723,7 @@ Compilation successful: pre_synth_sim.out generated
 
 **Screenshot Location:** `docs/images/terminal/compilation-success.png`
 
-### Simulation Execution
+### 3.3 Simulation Execution
 
 ```bash
 # Navigate to simulation directory
@@ -738,7 +750,7 @@ Simulation completed successfully
 
 **Screenshot Location:** `docs/images/terminal/simulation-execution.png`
 
-### Alternative: Using Makefile
+### 3.4 Alternative: Using Makefile
 
 ```bash
 # Return to project root
@@ -748,14 +760,11 @@ cd ~/VLSI/VSDBabySoC
 make pre_synth_sim
 ```
 
-</details>
+---
 
 ## 4. Waveform Analysis
 
-<details>
-<summary><strong>Click to expand Waveform Analysis Procedure</strong></summary>
-
-### Launch GTKWave
+### 4.1 Launch GTKWave
 
 ```bash
 # Launch GTKWave with VCD file
@@ -763,7 +772,7 @@ cd ~/VLSI/VSDBabySoC
 gtkwave output/pre_synth_sim/pre_synth_sim.vcd &
 ```
 
-### Signal Selection Process
+### 4.2 Signal Selection Process
 
 #### Step 1: Navigate Hierarchy
 - In SST (Signal Search Tree) panel, expand `testbench`
@@ -801,7 +810,7 @@ gtkwave output/pre_synth_sim/pre_synth_sim.vcd &
 
 **Screenshot Location:** `docs/images/waveforms/signal-selection-process.png`
 
-### Waveform Analysis
+### 4.3 Waveform Analysis
 
 #### Key Signals to Analyze:
 
@@ -820,7 +829,7 @@ gtkwave output/pre_synth_sim/pre_synth_sim.vcd &
 
 **Screenshot Location:** `docs/images/waveforms/complete-waveform-analysis.png`
 
-### Measurement and Documentation
+### 4.4 Measurement and Documentation
 
 ```bash
 # Save GTKWave session
@@ -836,14 +845,11 @@ gtkwave output/pre_synth_sim/pre_synth_sim.vcd &
 - Data transitions: 15+ valid changes
 - Analog output range: 0V to 3.3V
 
-</details>
+---
 
 ## 5. Post-synthesis Simulation
 
-<details>
-<summary><strong>Click to expand Post-synthesis Simulation</strong></summary>
-
-### Synthesis Process
+### 5.1 Synthesis Process
 
 ```bash
 # Activate Python environment
@@ -853,7 +859,7 @@ source sp_env/bin/activate
 make synth
 ```
 
-### Known Issue Documentation
+### 5.2 Known Issue Documentation
 
 **Error Encountered:**
 ```
@@ -874,7 +880,7 @@ make: *** [synth] Error 1
 
 **Screenshot Location:** `docs/images/terminal/synthesis-error.png`
 
-### Alternative Approaches
+### 5.3 Alternative Approaches
 
 #### Option 1: Manual Synthesis Debugging
 ```bash
@@ -890,14 +896,11 @@ grep -n "ERROR\|Failed\|Assert" synthesis.log
 - Place in `output/synth/vsdbabysoc.synth.v`
 - Continue with post-synthesis simulation
 
-</details>
+---
 
 ## 6. Results Documentation
 
-<details>
-<summary><strong>Click to expand Results Documentation Requirements</strong></summary>
-
-### Required Screenshots
+### 6.1 Required Screenshots
 
 #### Environment Setup:
 - [ ] Package installation confirmation
@@ -920,7 +923,7 @@ grep -n "ERROR\|Failed\|Assert" synthesis.log
 - [ ] Synthesis error message
 - [ ] Error analysis and root cause
 
-### Log File Collection
+### 6.2 Log File Collection
 
 ```bash
 # Collect all log files
@@ -936,21 +939,18 @@ cp output/pre_synth_sim/simulation_output.txt docs/lab/simulation-logs/
 cp synthesis.log docs/lab/simulation-logs/synthesis_error.log
 ```
 
-### Deliverable Checklist
+### 6.3 Deliverable Checklist
 
 - [ ] **Simulation logs**: Complete compilation and execution logs
 - [ ] **GTKWave screenshots**: Annotated waveform analysis
 - [ ] **Explanations**: Technical description of each waveform
 - [ ] **Issue documentation**: Post-synthesis error analysis
 
-</details>
+---
 
 ## 7. Troubleshooting Guide
 
-<details>
-<summary><strong>Click to expand Comprehensive Troubleshooting Guide</strong></summary>
-
-### Common Environment Issues
+### 7.1 Common Environment Issues
 
 #### Issue: `sandpiper-saas: command not found`
 **Solution:**
@@ -973,7 +973,7 @@ which iverilog
 iverilog -V
 ```
 
-### Compilation Issues
+### 7.2 Compilation Issues
 
 #### Issue: Include file not found
 **Solution:**
@@ -996,7 +996,7 @@ ls src/module/avsdpll.v
 ls src/module/avsddac.v
 ```
 
-### Simulation Issues
+### 7.3 Simulation Issues
 
 #### Issue: Simulation hangs or runs indefinitely
 **Solution:**
@@ -1018,7 +1018,7 @@ grep -n "\$dumpfile\|\$dumpvars" src/module/testbench.v
 ls -la output/pre_synth_sim/
 ```
 
-### GTKWave Issues
+### 7.4 GTKWave Issues
 
 #### Issue: Cannot see analog waveform
 **Solution:**
@@ -1037,23 +1037,140 @@ cd output/pre_synth_sim
 # File → Reload Waveform
 ```
 
-### Post-synthesis Issues
+### 7.5 Post-synthesis Issues
 
 #### Issue: ABC assertion failure
 **Status:** Known issue, not user error
 **Workaround:** Document issue and proceed with pre-synthesis results
 **Future Resolution:** Use OpenLANE Docker environment in later weeks
 
-</details>
+---
+
+## Appendices
+
+### Appendix A: Command Reference
+
+```bash
+# Essential commands summary
+source sp_env/bin/activate                    # Activate Python environment
+sandpiper-saas -i *.tlv -o *.v               # Convert TL-Verilog
+iverilog -o sim.out *.v                       # Compile Verilog
+./sim.out                                     # Run simulation
+gtkwave file.vcd &                           # Launch waveform viewer
+make clean                                    # Clean build artifacts
+```
+
+### Appendix B: File Locations
+
+```
+~/VLSI/VSDBabySoC/
+├── src/module/              ← Source Verilog files
+├── output/pre_synth_sim/    ← Pre-synthesis results
+├── docs/images/             ← Screenshots for documentation
+└── logs/                    ← All log files
+```
+
+### Appendix C: Success Criteria
+
+**Week 2 Part 2 Success Indicators:**
+- [ ] Successful Icarus Verilog compilation
+- [ ] VCD file generation and GTKWave visualization
+- [ ] Clear waveforms showing clock, reset, data flow
+- [ ] Analog DAC output properly displayed
+- [ ] Complete documentation with screenshots
+- [ ] Professional technical explanations
 
 ---
 
-## VSDBabySoC Architecture
+*This laboratory procedure document ensures reproducible results and comprehensive documentation of the VSDBabySoC functional modeling process.*
 
-<details>
-<summary><strong>Click to expand Complete Architecture Analysis</strong></summary>
+---
 
-### System Integration Overview
+## Part 1 - Theory: SoC Fundamentals
+
+### Comprehensive Analysis Topics
+
+#### 1. System-on-Chip Design Principles
+**Definition and Evolution**: Modern SoC represents the convergence of multiple functional components traditionally implemented as separate chips onto a single semiconductor substrate. This integration paradigm has revolutionized electronics by enabling unprecedented functionality, performance, and power efficiency.
+
+**Key Design Drivers**:
+- **Integration Complexity**: Managing heterogeneous IP blocks
+- **Power Management**: Multi-domain power optimization
+- **Performance Scalability**: Meeting diverse application requirements
+- **Cost Effectiveness**: Reducing system-level implementation costs
+
+#### 2. SoC Architecture Components
+
+**Processing Elements**:
+- Central Processing Units (CPUs) for general computation
+- Specialized processors (DSP, GPU, NPU) for targeted workloads
+- Microcontrollers for system management functions
+
+**Memory Hierarchy**:
+- On-chip cache memories for high-speed access
+- Memory controllers for external DRAM interface
+- Non-volatile storage controllers
+
+**Interconnect Infrastructure**:
+- Bus architectures (AHB, APB, AXI) for component communication
+- Network-on-Chip (NoC) for scalable architectures
+- Clock distribution and reset management
+
+**I/O and Peripheral Systems**:
+- Communication interfaces (USB, Ethernet, wireless)
+- Sensor interfaces (ADC, DAC, PWM)
+- Human-machine interfaces (display, audio, touch)
+
+#### 3. VSDBabySoC Educational Platform Analysis
+
+**Design Philosophy**: VSDBabySoC distills complex SoC principles into a comprehensible yet realistic implementation, maintaining essential characteristics while avoiding overwhelming complexity.
+
+**Component Integration**:
+- **RVMYTH Processor**: Demonstrates instruction processing, register management, and memory interface protocols
+- **Phase-Locked Loop**: Illustrates clock generation, jitter reduction, and synchronous design principles
+- **10-bit DAC**: Shows mixed-signal integration, digital control interfaces, and analog output generation
+
+**Educational Value**: Enables progressive learning from individual components to complete system integration, providing industry-relevant experience with standard interfaces and protocols.
+
+#### 4. Mixed-Signal Design Considerations
+
+**Analog-Digital Integration Challenges**:
+- Substrate noise coupling minimization
+- Power supply domain isolation
+- Signal integrity maintenance across mixed domains
+
+**Design Methodologies**:
+- Hierarchical design approach with clear interface definitions
+- Clock domain management and timing closure
+- Verification strategies across abstraction levels
+
+## Part 2 - Laboratory: Functional Modeling
+
+### Environment Setup and Tool Configuration
+
+#### Tool Installation and Verification
+
+**Essential EDA Tools**:
+- **Icarus Verilog**: Open-source Verilog simulation engine
+- **GTKWave**: Waveform visualization and analysis tool
+- **Sandpiper-SaaS**: TL-Verilog to Verilog conversion utility
+
+**Environment Configuration**:
+```bash
+# Python virtual environment setup
+python3 -m venv sp_env
+source sp_env/bin/activate
+pip install pyyaml click sandpiper-saas
+
+# Tool verification
+iverilog -V
+gtkwave --version
+sandpiper-saas --version
+```
+
+### VSDBabySoC Architecture
+
+#### System Integration Overview
 
 The VSDBabySoC implements a clean hierarchical architecture demonstrating proper SoC integration methodologies:
 
@@ -1078,7 +1195,7 @@ module vsdbabysoc(
 endmodule
 ```
 
-### Component Specifications
+#### Component Specifications
 
 | Component | Function | Key Parameters |
 |-----------|----------|----------------|
@@ -1086,18 +1203,67 @@ endmodule
 | **AVSDPLL** | Clock Generator | Input frequency multiplication |
 | **AVSDDAC** | D/A Converter | 10-bit resolution, real output |
 
-</details>
+### Pre-Synthesis Simulation Procedure
+
+#### Step 1: Environment Preparation
+
+**Directory Structure Creation**:
+```bash
+mkdir -p ~/VLSI/VSDBabySoC
+cd ~/VLSI/VSDBabySoC
+mkdir -p output/{pre_synth_sim,post_synth_sim}
+mkdir -p logs
+```
+
+**Source Code Organization**:
+- Clone VSDBabySoC repository
+- Verify source file integrity
+- Convert TL-Verilog to standard Verilog
+
+#### Step 2: TL-Verilog Conversion
+
+**TL-Verilog to Verilog Transformation**:
+```bash
+# Activate Python environment
+source sp_env/bin/activate
+
+# Convert RVMYTH from TL-Verilog
+sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v \
+    --bestsv --noline -p verilog --outdir ./src/module/
+```
+
+**Verification of Conversion**:
+- Generated file size and line count validation
+- Syntax verification using iverilog parser
+- Module interface consistency checking
+
+#### Step 3: Compilation and Simulation
+
+**Verilog Compilation**:
+```bash
+iverilog -o output/pre_synth_sim/pre_synth_sim.out \
+    -DPRE_SYNTH_SIM \
+    -I src/include -I src/module \
+    src/module/testbench.v \
+    src/module/vsdbabysoc.v \
+    src/module/rvmyth.v \
+    src/module/avsdpll.v \
+    src/module/avsddac.v
+```
+
+**Simulation Execution**:
+```bash
+cd output/pre_synth_sim
+./pre_synth_sim.out
+```
 
 ## Simulation Results
-
-<details>
-<summary><strong>Click to expand Complete Simulation Results Analysis</strong></summary>
 
 ### Pre-Synthesis Functional Verification
 
 #### Waveform Analysis Results
 
-**Key Signal Behavior Verification:**
+**Key Signal Behavior Verification**:
 
 | Signal | Expected Behavior | Observed Behavior | Status |
 |--------|-------------------|-------------------|--------|
@@ -1108,7 +1274,7 @@ endmodule
 
 #### Performance Metrics
 
-**Simulation Statistics:**
+**Simulation Statistics**:
 - **Total simulation time**: 500ns
 - **Clock frequency**: 100MHz (10ns period)
 - **Reset duration**: 50ns (5 clock cycles)
@@ -1127,7 +1293,7 @@ endmodule
 
 #### Known Technical Issue
 
-**Error Encountered:**
+**Error Encountered**:
 ```
 7.22. Executing ABC pass (technology mapping using ABC).
 ERROR: Assert `p != NULL' failed in kernel/yosys.cc:453.
@@ -1135,39 +1301,34 @@ Makefile:66: recipe for target 'synth' failed
 make: *** [synth] Error 1
 ```
 
-**Technical Analysis:**
+**Technical Analysis**:
 - **Root Cause**: Yosys/ABC assertion failure during technology mapping phase
 - **Tool Limitation**: Known issue with specific Verilog constructs in current tool version
 - **Impact**: Post-synthesis Gate-Level Simulation (GLS) cannot be completed
 - **Academic Status**: Week 2 objectives fully met through pre-synthesis verification
 
-**Professional Resolution Strategy:**
+**Professional Resolution Strategy**:
 - Document issue thoroughly for future reference
 - Continue with functional verification using pre-synthesis results
 - Plan alternative approaches for future synthesis requirements
 
-</details>
-
 ## Tools and Environment
-
-<details>
-<summary><strong>Click to expand Complete Tools and Environment Details</strong></summary>
 
 ### EDA Tool Ecosystem
 
 #### Core Simulation Tools
 
-**Icarus Verilog (iverilog):**
+**Icarus Verilog (iverilog)**:
 - Version: 10.3 or later
 - Purpose: Verilog HDL compilation and simulation
 - Usage: Front-end simulation and functional verification
 
-**GTKWave:**
+**GTKWave**:
 - Version: 3.3.103 or later  
 - Purpose: Waveform visualization and analysis
 - Features: Hierarchical signal browsing, measurement tools, analog display
 
-**Sandpiper-SaaS:**
+**Sandpiper-SaaS**:
 - Purpose: TL-Verilog to standard Verilog conversion
 - Installation: Python pip package
 - Integration: Command-line tool with batch processing
@@ -1181,7 +1342,7 @@ make: *** [synth] Error 1
 
 ### Simulation Environment Configuration
 
-**Directory Organization:**
+**Directory Organization**:
 ```
 workspace/
 ├── src/           ← Source Verilog files
@@ -1190,18 +1351,13 @@ workspace/
 └── scripts/       ← Automation utilities
 ```
 
-**Environment Variables:**
+**Environment Variables**:
 ```bash
 export VLSI_HOME=$HOME/VLSI
 export PATH=$VLSI_HOME/tools/bin:$PATH
 ```
 
-</details>
-
 ## Deliverables
-
-<details>
-<summary><strong>Click to expand Complete Deliverables List</strong></summary>
 
 ### Part 1 Deliverables - Theory
 
@@ -1243,12 +1399,7 @@ export PATH=$VLSI_HOME/tools/bin:$PATH
 - Alternative approaches and workarounds
 - Future resolution planning
 
-</details>
-
 ## Known Issues
-
-<details>
-<summary><strong>Click to expand Known Issues and Solutions</strong></summary>
 
 ### Post-Synthesis Simulation Blocker
 
@@ -1256,30 +1407,25 @@ export PATH=$VLSI_HOME/tools/bin:$PATH
 **Severity**: Medium (does not impact Week 2 objectives)  
 **Status**: Documented and tracked
 
-**Technical Details:**
+**Technical Details**:
 - **Tool**: Yosys synthesis engine with ABC technology mapper
 - **Error**: Assertion failure in kernel/yosys.cc at line 453
 - **Trigger**: Technology mapping phase during synthesis process
 - **Reproducibility**: Consistent across multiple attempts
 
-**Impact Assessment:**
+**Impact Assessment**:
 - ✅ Pre-synthesis simulation: Fully successful
 - ✅ Week 2 learning objectives: Completely achieved
 - ❌ Post-synthesis verification: Blocked by tool issue
 - ✅ Overall project progress: On track
 
-**Mitigation Strategy:**
+**Mitigation Strategy**:
 1. Document issue thoroughly for instructor review
 2. Continue with advanced topics using pre-synthesis foundation
 3. Explore alternative synthesis tools for future weeks
 4. Plan Docker-based OpenLANE integration for physical design phases
 
-</details>
-
 ## References
-
-<details>
-<summary><strong>Click to expand Complete References</strong></summary>
 
 ### Course Materials
 - [Week 0 Foundation](https://github.com/Vansh0917/RISC-V-Reference-SoC-Tapeout-Program_VLSI_Week_0): EDA tool setup and verification
@@ -1298,36 +1444,31 @@ export PATH=$VLSI_HOME/tools/bin:$PATH
 - Digital VLSI Design Flow (Front-end to Back-end)
 - Functional Verification Best Practices
 
-</details>
-
 ## Conclusion
-
-<details>
-<summary><strong>Click to expand Complete Conclusion and Future Perspectives</strong></summary>
 
 ### Week 2 Achievement Summary
 
 Week 2 of the RISC-V Reference SoC Tapeout Program has been successfully completed with comprehensive achievements in both theoretical understanding and practical implementation:
 
-**Theoretical Mastery Achieved:**
+**Theoretical Mastery Achieved**:
 - ✅ Deep understanding of SoC design principles and methodologies
 - ✅ Comprehensive analysis of VSDBabySoC architecture and components
 - ✅ Professional documentation of learning outcomes and educational value
 - ✅ Industry-relevant knowledge acquisition for career preparation
 
-**Practical Skills Developed:**
+**Practical Skills Developed**:
 - ✅ EDA tool proficiency with Icarus Verilog and GTKWave
 - ✅ Verilog simulation and functional verification expertise
 - ✅ Waveform analysis and debugging capabilities
 - ✅ Professional documentation and technical communication skills
 
-**Technical Accomplishments:**
+**Technical Accomplishments**:
 - ✅ Successful pre-synthesis functional verification
 - ✅ Complete simulation environment setup and configuration
 - ✅ Professional analysis of mixed-signal SoC behavior
 - ✅ Systematic approach to technical problem solving
 
-**Professional Development:**
+**Professional Development**:
 - ✅ Industry-standard documentation practices
 - ✅ Systematic debugging and issue resolution
 - ✅ Technical communication and presentation skills
@@ -1352,57 +1493,6 @@ Week 2 establishes a solid foundation for advancing to more complex topics in su
 **Tool Ecosystem Mastery**: Comprehensive EDA environment for complete tapeout flow
 **Professional Standards**: Documentation and presentation quality suitable for industry review
 
-### Key Learning Achievements
-
-The VSDBabySoC platform successfully demonstrates how complex SoC design principles can be made accessible through thoughtful educational design. Key achievements include:
-
-**Comprehensive Understanding:**
-Students develop thorough comprehension of SoC architecture, component integration, and verification methodologies through hands-on experience with a realistic yet manageable design.
-
-**Practical Skill Development:**
-The platform enables students to develop industry-relevant skills using professional EDA tools while working with standard protocols and interfaces.
-
-**System-Level Perspective:**
-By working with a complete SoC implementation, students develop critical system-level thinking skills essential for complex integrated circuit design.
-
-### Future Learning Trajectory
-
-The VSDBabySoC experience establishes a foundation for advanced topics:
-
-**Physical Design Flow:**
-- Floor planning and placement optimization
-- Routing and timing closure techniques
-- Power analysis and optimization
-- Design for manufacturability
-
-**Advanced Verification:**
-- Universal Verification Methodology (UVM)
-- Formal verification techniques
-- Coverage-driven verification
-- System-level validation
-
-**Specialized Domains:**
-- High-speed interface design
-- Memory subsystem optimization
-- Power management integration
-- Security and reliability enhancement
-
-### Impact on Professional Development
-
-This educational experience prepares students for successful careers in the semiconductor industry by providing:
-
-**Technical Foundation:**
-Solid understanding of SoC design principles, verification methodologies, and EDA tool usage.
-
-**Problem-Solving Skills:**
-Experience with real-world design challenges and systematic debugging approaches.
-
-**Industry Awareness:**
-Understanding of current trends, standard practices, and emerging technologies.
-
-**Continuous Learning Framework:**
-Ability to adapt to rapidly evolving technology landscape and embrace new design methodologies.
-
 ---
 
 **Week 2 Status: COMPLETE** ✅
@@ -1412,74 +1502,3 @@ Ability to adapt to rapidly evolving technology landscape and embrace new design
 ### About This Repository
 
 This repository represents Week 2 deliverables for the RISC-V Reference SoC Tapeout Program, building upon the foundation established in [Week 0](https://github.com/Vansh0917/RISC-V-Reference-SoC-Tapeout-Program_VLSI_Week_0). The comprehensive documentation and technical achievements demonstrate professional-level competency in SoC design fundamentals and functional modeling techniques essential for the complete chip design journey ahead.
-
-The VSDBabySoC educational platform represents an exemplary approach to SoC design education, successfully balancing theoretical depth with practical relevance. Through systematic exploration of its architecture, components, and integration strategies, students develop both technical competency and system-level understanding essential for success in the modern semiconductor industry. This foundation enables continued learning and professional growth in the dynamic field of integrated circuit design and verification.
-
-</details>
-
----
-
-### 🎯 Command Reference
-
-<details>
-<summary><strong>Click to view essential commands summary</strong></summary>
-
-```bash
-# Essential commands summary
-source sp_env/bin/activate                    # Activate Python environment
-sandpiper-saas -i *.tlv -o *.v               # Convert TL-Verilog
-iverilog -o sim.out *.v                       # Compile Verilog
-./sim.out                                     # Run simulation
-gtkwave file.vcd &                           # Launch waveform viewer
-make clean                                    # Clean build artifacts
-```
-
-</details>
-
----
-
-### 📁 File Locations
-
-<details>
-<summary><strong>Click to view complete file structure</strong></summary>
-
-```
-~/VLSI/VSDBabySoC/
-├── src/module/              ← Source Verilog files
-├── output/pre_synth_sim/    ← Pre-synthesis results
-├── docs/images/             ← Screenshots for documentation
-└── logs/                    ← All log files
-```
-
-</details>
-
----
-
-### ✅ Success Criteria
-
-<details>
-<summary><strong>Click to view Week 2 success indicators</strong></summary>
-
-**Week 2 Complete Success Indicators:**
-- [ ] Successful Icarus Verilog compilation
-- [ ] VCD file generation and GTKWave visualization
-- [ ] Clear waveforms showing clock, reset, data flow
-- [ ] Analog DAC output properly displayed
-- [ ] Complete documentation with screenshots
-- [ ] Professional technical explanations
-
-</details>
-
----
-
-*This comprehensive combined documentation ensures complete coverage of Week 2 objectives and provides a thorough foundation for the VSDBabySoC functional modeling process within the RISC-V Reference SoC Tapeout Program.*
-
----
-
-### 📧 Contact Information
-
-For questions regarding this Week 2 documentation or the RISC-V Reference SoC Tapeout Program, please refer to the course materials and instructor guidance.
-
-**Repository Status:** Week 2 Complete ✅  
-**Documentation Version:** Combined Complete v1.0  
-**Last Updated:** September 29, 2025
