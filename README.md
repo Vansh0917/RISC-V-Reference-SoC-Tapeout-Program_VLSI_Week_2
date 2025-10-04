@@ -184,6 +184,8 @@ Comprehensive I/O capabilities enable SoC interaction with external systems:
 ### 3.1 Design Philosophy and Educational Objectives
 
 The VSDBabySoC has been specifically architected as an educational platform that distills complex SoC design principles into a comprehensible yet realistic implementation. Its design philosophy encompasses several key educational objectives:
+<img width="2270" height="1260" alt="image" src="https://github.com/user-attachments/assets/685e2589-7e71-4f62-aa08-541c8d2704b5" />
+
 
 **Complexity Management:**
 The platform maintains essential SoC characteristics while avoiding overwhelming complexity that might obscure fundamental concepts. This balance enables students to grasp core principles without becoming lost in implementation details.
@@ -204,6 +206,8 @@ The RISC-V based RVMYTH processor serves as the computational heart of the VSDBa
 - Memory interface protocols
 
 **Phase-Locked Loop (PLL):**
+<img width="885" height="535" alt="image" src="https://github.com/user-attachments/assets/83cd88b6-8e51-44ca-bc1f-914d28c3f54f" />
+
 The integrated PLL demonstrates critical clock management concepts:
 - Reference clock multiplication and division
 - Jitter reduction and clock stability
@@ -211,6 +215,8 @@ The integrated PLL demonstrates critical clock management concepts:
 - Synchronous system design principles
 
 **Digital-to-Analog Converter (DAC):**
+<img width="600" height="556" alt="image" src="https://github.com/user-attachments/assets/cbaef7ed-7cec-4aec-9060-43cf2a4cb619" />
+
 The 10-bit DAC illustrates mixed-signal integration challenges:
 - Digital control interface implementation
 - Analog output generation techniques
@@ -539,6 +545,8 @@ sudo apt install -y build-essential git python3 python3-pip
 sudo apt install -y make cmake pkg-config
 sudo apt install -y iverilog gtkwave
 ```
+![WhatsApp Image 2025-10-03 at 21 59 35_cc317ff1](https://github.com/user-attachments/assets/3290f6f8-306c-4e27-9849-0aa5885a0028)
+
 
 **Expected Output:**
 ```
@@ -550,7 +558,6 @@ Setting up iverilog (10.3-1) ...
 Setting up gtkwave (3.3.103-1) ...
 ```
 
-**Screenshot Location:** `docs/images/setup/package-installation.png`
 
 #### Step 2: Install Python Dependencies
 
@@ -562,7 +569,9 @@ python3 -m venv sp_env
 source sp_env/bin/activate
 
 # Install required Python packages
-pip install pyyaml click sandpiper-saas
+pip3 install pyyaml click sandpiper-saas
+
+
 ```
 
 **Verification Command:**
@@ -602,6 +611,7 @@ cd VSDBabySoC
 # Verify repository structure
 ls -la
 ```
+<img width="1295" height="860" alt="Screenshot 2025-09-28 205834" src="https://github.com/user-attachments/assets/69f881e3-ddc2-4fe3-b429-d40ada160520" />
 
 **Expected Structure:**
 ```
@@ -610,8 +620,9 @@ drwxrwxr-x  3 user user 4096 Sep 28 20:58 src/
 -rw-rw-r--  1 user user 4567 Sep 28 20:58 README.md
 drwxrwxr-x  2 user user 4096 Sep 28 20:58 output/
 ```
+<img width="1590" height="1023" alt="Screenshot 2025-09-28 210037" src="https://github.com/user-attachments/assets/fa49f7bc-2ecd-4bc3-9717-7f93f4710398" />
 
-**Screenshot Location:** `docs/images/setup/repo-structure.png`
+<img width="1919" height="1079" alt="Screenshot 2025-09-28 210159" src="https://github.com/user-attachments/assets/5c47c9e6-3b7b-4fd9-b19d-7e133254eaca" />
 
 ### 2.2 Source Code Analysis
 
@@ -624,6 +635,10 @@ drwxrwxr-x  2 user user 4096 Sep 28 20:58 output/
 | `avsdpll.v` | Phase-locked loop model | `src/module/` |
 | `avsddac.v` | Digital-to-analog converter | `src/module/` |
 | `testbench.v` | Simulation testbench | `src/module/` |
+
+<img width="1919" height="1079" alt="Screenshot 2025-09-28 210250" src="https://github.com/user-attachments/assets/011d34d2-ec13-4f53-b17d-5df63d219410" />
+<img width="1915" height="1079" alt="Screenshot 2025-09-28 211104" src="https://github.com/user-attachments/assets/962a6e32-52d8-4a05-b49c-7ce80dc5fefc" />
+
 
 ### 2.3 TL-Verilog to Verilog Conversion
 
@@ -638,16 +653,10 @@ sandpiper-saas -i ./src/module/*.tlv -o rvmyth.v \
 # Verify conversion
 ls -la src/module/rvmyth.v
 ```
+<img width="1920" height="1020" alt="Screenshot 2025-09-28 212154" src="https://github.com/user-attachments/assets/fbcf621c-4c89-4e28-ade7-d3a1c6b4681d" />
+<img width="1920" height="1020" alt="Screenshot 2025-09-28 212732" src="https://github.com/user-attachments/assets/998f3327-5c0c-4328-a382-80c76fa9ae23" />
 
-**Expected Output:**
-```
-Sandpiper SaaS Compilation:
-Processing: ./src/module/rvmyth.tlv
-Output: ./src/module/rvmyth.v
-Status: SUCCESS
-```
 
-**Screenshot Location:** `docs/images/terminal/tlv-conversion.png`
 
 ---
 
@@ -658,9 +667,8 @@ Status: SUCCESS
 ```bash
 # Create necessary output directories
 mkdir -p output/pre_synth_sim
-mkdir -p output/post_synth_sim
-mkdir -p logs/
 ```
+<img width="1920" height="1020" alt="Screenshot 2025-09-28 212732" src="https://github.com/user-attachments/assets/69ad6b23-9e5d-4e03-b031-84457e8f6cf5" />
 
 ### 3.2 Compilation Process
 
@@ -687,7 +695,8 @@ src/module/vsdbabysoc.v:15: warning: Module vsdbabysoc has no timescale directiv
 Compilation successful: pre_synth_sim.out generated
 ```
 
-**Screenshot Location:** `docs/images/terminal/compilation-success.png`
+<img width="1920" height="1020" alt="Screenshot 2025-09-28 212840" src="https://github.com/user-attachments/assets/131553af-c5d7-4be0-a284-e2eb5a428720" />
+
 
 ### 3.3 Simulation Execution
 
@@ -731,6 +740,7 @@ make pre_synth_sim
 ## 4. Waveform Analysis
 
 ### 4.1 Launch GTKWave
+<img width="1919" height="1079" alt="Screenshot 2025-09-28 222305" src="https://github.com/user-attachments/assets/07880c85-8465-47b0-a917-8023593dbe44" />
 
 ```bash
 # Launch GTKWave with VCD file
@@ -824,6 +834,8 @@ source sp_env/bin/activate
 # Attempt synthesis using Makefile
 make synth
 ```
+<img width="1915" height="1079" alt="Screenshot 2025-09-28 223941" src="https://github.com/user-attachments/assets/f5725955-69a7-4115-8d64-635e944980df" />
+<img width="1919" height="1079" alt="Screenshot 2025-09-28 224711" src="https://github.com/user-attachments/assets/424bbffd-9be4-4ddc-82c6-30e46516d20a" />
 
 ### 5.2 Known Issue Documentation
 
@@ -834,6 +846,7 @@ ERROR: Assert `p != NULL' failed in kernel/yosys.cc:453.
 Makefile:66: recipe for target 'synth' failed
 make: *** [synth] Error 1
 ```
+<img width="1919" height="1079" alt="Screenshot 2025-09-28 232139" src="https://github.com/user-attachments/assets/e093b473-5c6a-4c95-90f4-dd09544239d4" />
 
 **Root Cause Analysis:**
 - Yosys/ABC assertion failure during technology mapping
