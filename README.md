@@ -1142,6 +1142,4 @@ Week 2 establishes a solid foundation for advancing to more complex topics in su
 
 *This comprehensive documentation demonstrates successful completion of Week 2 objectives and establishes readiness for continued progress through the 20-week RISC-V Reference SoC Tapeout Program.*
 
-### About This Repository
 
-This repository represents Week 2 deliverables for the RISC-V Reference SoC Tapeout Program, building upon the foundation established in [Week 0](https://github.com/Vansh0917/RISC-V-Reference-SoC-Tapeout-Program_VLSI_Week_0). The comprehensive documentation and technical achievements demonstrate professional-level competency in SoC design fundamentals and functional modeling techniques essential for the complete chip design journey ahead.
